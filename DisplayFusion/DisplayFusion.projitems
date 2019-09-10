@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>b92d1fc5-353c-431a-8f10-6ae6a44e22de</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>DisplayFusion</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Application.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Audio.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clipboard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dialog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DisplayFusion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)General.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Input.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Monitor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ScreenSaver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ScriptSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Taskbar.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Text.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Web.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Window.cs" />
+  </ItemGroup>
+</Project>

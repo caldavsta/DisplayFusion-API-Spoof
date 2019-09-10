@@ -3,29 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DisplayFusion", "DisplayFusion.vcxproj", "{D270A477-5069-4C10-9AB6-19DF017F6A31}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BFS", "BFS.shproj", "{B92D1FC5-353C-431A-8F10-6AE6A44E22DE}"
 EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D270A477-5069-4C10-9AB6-19DF017F6A31}.Debug|x64.ActiveCfg = Debug|x64
-		{D270A477-5069-4C10-9AB6-19DF017F6A31}.Debug|x64.Build.0 = Debug|x64
-		{D270A477-5069-4C10-9AB6-19DF017F6A31}.Debug|x86.ActiveCfg = Debug|Win32
-		{D270A477-5069-4C10-9AB6-19DF017F6A31}.Debug|x86.Build.0 = Debug|Win32
-		{D270A477-5069-4C10-9AB6-19DF017F6A31}.Release|x64.ActiveCfg = Release|x64
-		{D270A477-5069-4C10-9AB6-19DF017F6A31}.Release|x64.Build.0 = Release|x64
-		{D270A477-5069-4C10-9AB6-19DF017F6A31}.Release|x86.ActiveCfg = Release|Win32
-		{D270A477-5069-4C10-9AB6-19DF017F6A31}.Release|x86.Build.0 = Release|Win32
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		DisplayFusion.projitems*{b92d1fc5-353c-431a-8f10-6ae6a44e22de}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D22F82CB-DEB8-4B6B-B0D2-3B6E113BE39B}
+		SolutionGuid = {662A783A-2441-41D2-8D55-6FBB0D33F72F}
 	EndGlobalSection
 EndGlobal

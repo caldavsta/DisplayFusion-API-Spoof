@@ -1,0 +1,276 @@
+# how to
+
+get these function names by copying the whole page at https://www.displayfusion.com/ScriptedFunctions/Help/ and using this regex
+
+    Function\t\n.+(\(.*\);)(?=\n)$
+
+then search and replace in NP++ the following with nothing:
+
+    /t/r/n
+
+# class names
+	
+
+BFS.Application
+BFS.Audio
+BFS.Clipboard
+BFS.Dialog
+BFS.DisplayFusion
+BFS.General
+BFS.Input
+BFS.Monitor
+BFS.ScreenSaver
+BFS.ScriptSettings
+BFS.Taskbar
+BFS.Text
+BFS.Web
+BFS.Window
+
+# functions
+
+string[] GetAllRunningApplicationFiles();
+uint[] GetAllRunningApplicationIDs();
+uint GetAppIDByFile(string file);
+uint GetAppIDByWindow(IntPtr windowHandle);
+string GetMainFileByAppID(uint appID);
+string GetMainFileByWildcard(string file);
+string GetMainFileByWindow(IntPtr windowHandle);
+IntPtr GetMainWindowByAppID(uint appID);
+IntPtr GetMainWindowByFile(string file);
+bool IsAppRunningByAppID(uint appID);
+bool IsAppRunningByFile(string file);
+bool Kill(uint appID);
+uint Start(string filename, string arguments);
+bool WaitForExitByAppID(uint appID, uint waitMS);
+bool WaitForExitByFile(uint appID, uint waitMS);
+bool AdjustVolumeDown();
+bool AdjustVolumeUp();
+bool GetApplicationMute(uint appID);
+float GetApplicationVolume(uint appID);
+string GetDefaultPlaybackCommunications();
+string GetDefaultPlaybackSounds();
+string GetDefaultRecordingCommunications();
+string GetDefaultRecordingSounds();
+string[] GetPlaybackDevices();
+string[] GetRecordingDevices();
+bool PlayFile(string filename);
+bool PlayWAV(string filename);
+bool SetApplicationMute(uint appID, bool mute);
+bool SetApplicationVolume(uint appID, float volume);
+bool SetApplicationVolumeMax(uint appID);
+bool SetApplicationVolumeMin(uint appID);
+bool SetDefaultPlaybackCommunications(string name);
+bool SetDefaultPlaybackSounds(string name);
+bool SetDefaultRecordingCommunications(string name);
+bool SetDefaultRecordingSounds(string name);
+bool SetVolumeMax();
+bool SetVolumeMin();
+bool ToggleMute();
+bool Clear();
+bool Copy();
+string CopyText();
+string GetText();
+bool HasImage();
+bool HasText();
+bool Paste();
+bool PasteText(string text);
+bool SetHTML(string html);
+bool SetText(string text);
+bool GetUserConfirm(string message);
+string GetUserInput(string title, string value);
+string GetUserInputList(string title, string[] values);
+string GetUserInputListViewWithFilter(string title, string[] values);
+void ShowMessageError(string message);
+void ShowMessageErrorMonospaced(string message);
+void ShowMessageInfo(string message);
+void ShowMessageInfoMonospaced(string message);
+void ShowTrayMessage(string message);
+bool DisableAllTaskbars();
+bool DisableTaskbar(uint monitorID);
+bool EnableAllTaskbars();
+bool EnableTaskbar(uint monitorID);
+bool EnableTaskbarOnSide(uint monitorID, string side);
+string GetCurrentMonitorProfile();
+string GetCurrentWallpaperProfile();
+string[] GetDesktopIconsProfiles();
+string[] GetFunctions();
+string[] GetMonitorProfiles();
+string[] GetWallpaperProfiles();
+bool LoadDesktopIconsProfile(string name);
+bool LoadMonitorProfile(string name);
+bool LoadMonitorProfileHideErrors(string name);
+bool LoadWallpaperProfile(string name);
+bool LoadWindowPositionProfile(string name);
+IntPtr MirrorSelectedArea(int x, int y, int width, int height);
+bool ReloadSettings();
+bool RunFunction(string name);
+bool RunFunctionAndWait(string name);
+bool RunFunctionAndWaitWithWindowHandle(string name, IntPtr windowHandle);
+bool RunFunctionWithWindowHandle(string name, IntPtr windowHandle);
+bool SaveDesktopIconsProfile(string name);
+bool SaveWindowPositionProfile(string name);
+bool WallpaperFeatureDisable();
+bool WallpaperFeatureEnable();
+bool WallpaperFeatureToggle();
+bool WallpaperSlideshowPause();
+bool WallpaperSlideshowResume();
+bool WallpaperSlideshowToggle();
+string GetAppExecutable();
+string GetAppInstallPath();
+bool GetAppIsProVersion();
+string GetAppVersion();
+bool IsDesktopLocked();
+bool LockDesktop();
+void LogText(string text);
+bool SleepMonitors();
+bool ThreadWait(uint waitMS);
+bool WakeMonitors();
+int GetMousePositionX();
+int GetMousePositionY();
+bool IsKeyDown(string keys);
+bool IsMouseDown(string buttons);
+bool LeftClickMouse();
+bool MiddleClickMouse();
+bool RightClickMouse();
+bool SendKeyDown(string keys);
+bool SendKeys(string keys);
+bool SendKeysFast(string keys);
+bool SendKeyUp(string keys);
+bool SendText(string text);
+bool SetMousePosition(int x, int y);
+bool SetMousePositionRelative(int x, int y);
+bool SetMousePositionRelativeNoAcceleration(int x, int y);
+Rectangle[] GetMonitorBounds();
+Rectangle GetMonitorBoundsByID(uint monitorID);
+Rectangle GetMonitorBoundsByMouseCursor();
+Rectangle GetMonitorBoundsByRect(Rectangle rect);
+Rectangle GetMonitorBoundsByWindow(IntPtr windowHandle);
+Rectangle GetMonitorBoundsByXY(int x, int y);
+Rectangle[] GetMonitorBoundsNoSplits();
+int GetMonitorCountEnabled();
+int GetMonitorCountEnabledAndDisabled();
+int GetMonitorCountEnabledNoSplits();
+uint GetMonitorIDByRect(Rectangle rect);
+uint GetMonitorIDByWindow(IntPtr windowHandle);
+uint GetMonitorIDByXY(int x, int y);
+uint[] GetMonitorIDs();
+Rectangle GetMonitorWorkAreaByID(uint monitorID);
+Rectangle GetMonitorWorkAreaByMouseCursor();
+Rectangle GetMonitorWorkAreaByRect(Rectangle rect);
+Rectangle GetMonitorWorkAreaByWindow(IntPtr windowHandle);
+Rectangle GetMonitorWorkAreaByXY(int x, int y);
+Rectangle[] GetMonitorWorkAreas();
+Rectangle GetPrimaryMonitorBounds();
+uint GetPrimaryMonitorID();
+Rectangle GetPrimaryMonitorWorkArea();
+uint ShowMonitorSelector();
+bool GetPasswordLocked();
+int GetTimeoutMinutes();
+bool SetPasswordLocked(bool isPasswordLocked);
+bool SetTimeoutMinutes(int timeoutMinutes);
+bool DeleteAllValues();
+bool DeleteValue(string name);
+string[] GetValueNames();
+string ReadValue(string name);
+bool ReadValueBool(string name);
+string ReadValueEncrypted(string name);
+int ReadValueInt(string name);
+bool WriteValue(string name, string value);
+bool WriteValueBool(string name, bool value);
+bool WriteValueEncrypted(string name, string value);
+bool WriteValueInt(string name, int value);
+bool IsWindowsTaskbarAutoHideEnabled();
+bool SetWindowsTaskbarAutoHide(bool isAutoHidden);
+bool QueryIsMatch(string query, string text);
+string ScrubHtml(string text, bool isIgnorningEmptyTags);
+string ScrubLineBreaks(string text);
+string ScrubLineBreaksAfter(string text);
+string ScrubLineBreaksBefore(string text);
+string ScrubTabs(string text);
+string ScrubTabsAfter(string text);
+string ScrubTabsBefore(string text);
+string ScrubWhitespace(string text);
+string ScrubWhitespaceAfter(string text);
+string ScrubWhitespaceBefore(string text);
+string GetDefaultBrowserExe();
+bool OpenUrl(string url);
+IntPtr OpenUrlNewWindow(string url);
+bool AddToWindowsTaskbar(IntPtr windowHandle);
+string BuildWindowDebug(IntPtr windowHandle);
+bool Close(IntPtr windowHandle);
+bool DisableWindow(IntPtr windowHandle);
+bool EnableWindow(IntPtr windowHandle);
+bool Focus(IntPtr windowHandle);
+IntPtr[] GetAllWindowHandles();
+bool GetAlwaysOnTop(IntPtr windowHandle);
+Rectangle GetBounds(IntPtr windowHandle);
+IntPtr GetChildWindowByClass(IntPtr windowHandleParent, string windowClass);
+string GetClass(IntPtr windowHandle);
+Rectangle GetClientRect(IntPtr windowHandle);
+IntPtr GetFocusedWindow();
+IntPtr GetOwner(IntPtr windowHandle);
+IntPtr GetParent(IntPtr windowHandle);
+IntPtr GetParentRoot(IntPtr windowHandle);
+string GetText(IntPtr windowHandle);
+decimal GetTransparency(IntPtr windowHandle);
+IntPtr[] GetVisibleAndMinimizedWindowHandles();
+IntPtr[] GetVisibleWindowHandles();
+IntPtr[] GetVisibleWindowHandlesByMonitor(uint monitorID);
+IntPtr GetWindowByClass(string windowClass);
+IntPtr GetWindowByText(string windowText);
+IntPtr GetWindowByTextExact(string windowText);
+IntPtr GetWindowProperty(IntPtr windowHandle, string propertyName);
+IntPtr[] GetWindowsByText(string windowText);
+IntPtr[] GetWindowsByTextExact(string windowText);
+BFS.WindowEnum.WindowStyle GetWindowStyle(IntPtr windowHandle);
+BFS.WindowEnum.WindowStyleEx GetWindowStyleEx(IntPtr windowHandle);
+IntPtr GetWindowUnderMouse();
+bool HasWindowStyle(BFS.WindowEnum.WindowStyle windowStyle, IntPtr windowHandle);
+bool HasWindowStyleEx(BFS.WindowEnum.WindowStyleEx windowStyleEx, IntPtr windowHandle);
+bool IsHung(IntPtr windowHandle);
+bool IsMaximized(IntPtr windowHandle);
+bool IsMinimized(IntPtr windowHandle);
+bool IsRestored(IntPtr windowHandle);
+bool IsVisible(IntPtr windowHandle);
+bool IsWindowRolledUpToHat(IntPtr windowHandle);
+bool IsWindowRolledUpToIcon(IntPtr windowHandle);
+bool IsWindowRolledUpToTitleBar(IntPtr windowHandle);
+bool Maximize(IntPtr windowHandle);
+bool Minimize(IntPtr windowHandle);
+bool MoveToBottomMonitorHalf(IntPtr windowHandle);
+bool MoveToCentreMonitor(IntPtr windowHandle);
+bool MoveToLeftMonitorHalf(IntPtr windowHandle);
+bool MoveToMonitor(uint monitorID, IntPtr windowHandle);
+bool MoveToMonitorMaximized(uint monitorID, IntPtr windowHandle);
+bool MoveToMonitorResized(uint monitorID, IntPtr windowHandle);
+bool MoveToNextMonitor(IntPtr windowHandle);
+bool MoveToNextMonitorMaximized(IntPtr windowHandle);
+bool MoveToNextMonitorResized(IntPtr windowHandle);
+bool MoveToPreviousMonitor(IntPtr windowHandle);
+bool MoveToPreviousMonitorMaximized(IntPtr windowHandle);
+bool MoveToPreviousMonitorResized(IntPtr windowHandle);
+bool MoveToRightMonitorHalf(IntPtr windowHandle);
+bool MoveToTopMonitorHalf(IntPtr windowHandle);
+bool RemoveFromWindowsTaskbar(IntPtr windowHandle);
+bool RemoveWindowHighlight(IntPtr windowHandle);
+bool RemoveWindowProperty(IntPtr windowHandle, string propertyName);
+bool Restore(IntPtr windowHandle);
+bool RollupWindowToHat(IntPtr windowHandle);
+bool RollupWindowToIcon(IntPtr windowHandle);
+bool RollupWindowToTitleBar(IntPtr windowHandle);
+bool SetAlwaysOnTop(IntPtr windowHandle, bool alwaysOnTop);
+bool SetLocation(IntPtr windowHandle, int x, int y);
+bool SetOwner(IntPtr windowHandle, IntPtr windowHandleOwner);
+bool SetSize(IntPtr windowHandle, int width, int height);
+bool SetSizeAndLocation(IntPtr windowHandle, int x, int y, int width, int height);
+bool SetText(IntPtr windowHandle, string text);
+bool SetTransparency(IntPtr windowHandle, decimal transparencyPercent);
+bool SetWindowHighlight(IntPtr windowHandle, Color colour);
+bool SetWindowProperty(IntPtr windowHandle, string propertyName, IntPtr propertyValue);
+bool SetWindowStyle(BFS.WindowEnum.WindowStyle windowStyle, IntPtr windowHandle);
+bool SetWindowStyleEx(BFS.WindowEnum.WindowStyleEx windowStyleEx, IntPtr windowHandle);
+bool ShowDesktop(IntPtr windowHandle);
+bool ToggleAlwaysOnTop(IntPtr windowHandle);
+bool UnrollWindowFromHat(IntPtr windowHandle);
+bool UnrollWindowFromIcon(IntPtr windowHandle);
+bool UnrollWindowFromTitleBar(IntPtr windowHandle);
